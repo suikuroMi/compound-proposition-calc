@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logic Proposition Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>Compound Proposition Calculator</h1>
+
+    <div class="input-group">
+      <label for="expr">Enter proposition (use variables like A, B, C):</label>
+      <input id="expr" value="(A⊕B)∨(¬A∧¬B)" placeholder="Example: (A → B) ∧ (B → C)">
+      <div class="syntax-hint">
+        <strong>Supported operators:</strong> ¬ (NOT), ∧ (AND), ∨ (OR), ⊕ (XOR), → (implies), ↔ (biconditional)
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="assign">Variable assignments (example: A=1,B=0,C=1):</label>
+      <input id="assign" value="A=1,B=1" placeholder="Leave empty for all combinations">
+    </div>
+
+    <div class="button-group">
+      <button id="evaluateBtn">Evaluate</button>
+      <button id="generateAllBtn">Generate All Assignments</button>
+      <button id="copyTableBtn">Copy Truth Table</button>
+    </div>
+
+    <div class="output-section">
+      <h2>Step-by-Step Solution</h2>
+      <pre id="steps"></pre>
+    </div>
+
+    <div class="output-section">
+      <h2>Truth Table</h2>
+      <div id="truthTable"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
